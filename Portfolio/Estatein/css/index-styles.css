@@ -974,7 +974,7 @@ body {
     padding: 50px 0;
     border-top: 1px solid #262626;
     border-bottom: 1px solid #262626;
-    background-image: url(../../img/explore/bg-image-mobile-1.png), url(../../img/explore/bg-image-mobile-2.png);
+    background-image: url(../img/explore/bg-image-mobile-1.png), url(../img/explore/bg-image-mobile-2.png);
     background-repeat: no-repeat, no-repeat;
     background-position: top left, right bottom;
   }
