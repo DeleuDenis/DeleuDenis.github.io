@@ -1,0 +1,50 @@
+.button{
+    padding: 14px 20px;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    background-color: $background-primary;
+    transition: $transition;
+    font-size: 14px;
+}
+.button_secondary{
+    background-color: $background-secondary;
+}
+.button:hover{
+    background-color: rgba(0,0,0, 0.6);
+}
+
+.button_purple{
+    background: rgb(112, 59, 247);
+}
+
+.button_purple:hover{
+    background-color: rgba(112, 59, 247, 0.8);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    position: static;
+    width: 44px;
+    height: 44px;
+    background-color: $background-secondary;
+    border: 1px solid $border-color;
+    text-align: center;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
+    background-color: transparent;
+    opacity: 1;
+}
+
+.swiper-button-prev.swiper-button-disabled::after,
+.swiper-button-next.swiper-button-disabled::after {
+    opacity: .35;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    content: '';
+}

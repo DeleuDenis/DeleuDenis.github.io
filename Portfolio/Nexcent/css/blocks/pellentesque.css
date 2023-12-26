@@ -1,0 +1,50 @@
+.pellentesque {
+    margin-top: 175px;
+    padding: 32px 0;
+    background-color: #F5F7FA;
+}
+
+.pellentesque__title {
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 118.75%;
+    color: #263238;
+    text-align: center;
+}
+
+.pellentesque__title+*{
+    margin-top: 32px;
+}
+
+.pellentesque__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button img{
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+@media (max-width: 1199px){
+    .pellentesque__title {
+        font-size: 54px;
+    }
+}
+
+@media (max-width: 992px){
+    .pellentesque {
+        margin-top: 125px;
+    }
+    
+    .pellentesque__title {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 767px){
+    .pellentesque__title {
+        font-size: 36px;
+    }
+}

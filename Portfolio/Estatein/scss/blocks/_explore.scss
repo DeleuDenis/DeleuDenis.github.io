@@ -1,0 +1,67 @@
+.explore {
+    margin-top: 72px;
+    padding: 60px 0;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    background-image: url(../img/explore/bg-image-1.png), url(../img/explore/bg-image-2.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom left, right bottom;
+
+    &__row {
+        display: flex;
+        gap: 150px;
+        align-items: center;
+    }
+
+    &__title.title {
+        padding-top: 0;
+    }
+
+    &__title.title::before {
+        content: '';
+        width: 0;
+        height: 0;
+    }
+
+    &__title+* {
+        margin-top: 10px;
+    }
+
+    &__buttons {
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 992px) {
+    .explore {
+        margin-top: 50px;
+        padding: 50px 0;
+        border-top: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
+        background-image: url(../../img/explore/bg-image-mobile-1.png), url(../../img/explore/bg-image-mobile-2.png);
+        background-repeat: no-repeat, no-repeat;
+        background-position: top left, right bottom;
+    }
+}
+
+@media (max-width: 767px) {
+    .explore {
+        margin-top: 30px;
+       
+        &__row {
+            flex-direction: column;
+            gap: 30px;
+        }
+    
+        &__title.title {
+            padding-top: 0;
+        }
+        &__title+* {
+            margin-top: 6px;
+        }
+    
+        &__buttons, &__buttons button{
+            width: 100%;
+        }
+    }
+}

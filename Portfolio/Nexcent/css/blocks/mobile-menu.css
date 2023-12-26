@@ -1,0 +1,31 @@
+.mobile-menu {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.mobile-menu__row {
+    padding: 15px;
+    background-color: #fff;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.mobile-menu__nav{
+    text-align: center;
+    font-size: 22px;
+}
+
+.mobile-menu__nav li+li{
+    margin-top: 15px;
+}
+
+.mobile-menu.active{
+    display: block;
+}

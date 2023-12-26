@@ -1,0 +1,25 @@
+.button {
+    color: #FFF;
+    font-weight: 500;
+    line-height: 150%;
+    background-color: #4CAF4F;
+    font-size: 16px;
+    padding: 14px 32px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.button_transparent{
+    background-color: transparent;
+    color: #4CAF4F;
+}
+
+.button_small {
+    font-size: 14px;
+    padding: 10px 20px;
+    line-height: 142.857%;
+}
+
+.button:hover{
+    opacity: 0.8;
+}

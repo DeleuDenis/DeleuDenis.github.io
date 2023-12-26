@@ -1,0 +1,60 @@
+body{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #717171;
+}
+
+/* Utilyty */
+
+.none{
+    display: none !important;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+/* Grid */
+
+.container{
+    max-width: 1182px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 1181px){
+    .container{
+    max-width: 100%;
+    }
+}
+
+/* Text */
+
+.title{
+    color: #4D4D4D;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 122.222%;
+}
+
+.text{
+    line-height: 142.857%;
+}
+
+.text_big{
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.green{
+    color: #4CAF4F;
+}
+
+@media (max-width: 992px){
+    .title{
+    font-size: 28px;
+    }
+}

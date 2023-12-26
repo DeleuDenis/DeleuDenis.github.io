@@ -1,0 +1,42 @@
+.clients {
+    padding: 40px 0;
+}
+
+.clients__title {
+    text-align: center;
+}
+
+.clients__title+* {
+    margin-top: 8px;
+}
+
+.clients__text{
+    text-align: center;
+}
+
+.clients__text+*{
+    margin-top: 16px;
+}
+
+.clients_logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 98px;
+}
+
+@media (max-width: 1199px){
+    .clients_logos{
+        justify-content: center;
+    }
+
+    .clients_logos a+*{
+        margin-left: 100px;
+    }
+}
+@media (max-width: 992px){
+    .clients_logos a+*{
+        margin-left: 20px;
+    }
+}

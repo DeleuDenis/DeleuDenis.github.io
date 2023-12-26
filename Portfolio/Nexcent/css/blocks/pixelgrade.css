@@ -1,0 +1,59 @@
+.Pixelgrade__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Pixelgrade__image {
+    padding: 52px 0;
+}
+
+.Pixelgrade__content {
+    max-width: 661px;
+}
+
+.Pixelgrade__title+* {
+    margin-top: 16px;
+}
+
+.Pixelgrade__text+* {
+    margin-top: 32px;
+}
+
+.Pixelgrade__buttons {
+    display: flex;
+}
+
+@media (max-width: 1199px) {
+    .Pixelgrade__row {
+        justify-content: center;
+    }
+
+    .Pixelgrade__content {
+        max-width: 550px;
+    }
+}
+
+
+@media (max-width: 992px) {
+    .Pixelgrade__row {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .Pixelgrade__content {
+        max-width: 500px;
+    }
+
+    .Pixelgrade__text+* {
+        margin-top: 20px;
+    }
+
+    .Pixelgrade__image {
+        padding: 30px 0;
+    }
+
+    .Pixelgrade__buttons {
+        justify-content: center;
+    }
+}
