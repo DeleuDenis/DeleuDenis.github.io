@@ -1,6 +1,11 @@
+//I know that is not the better solution. When I'll learn to use React then solution will be more brilliant.
+
+//DOMContentLoaded needed for the correct display of the counter
 document.addEventListener("DOMContentLoaded", function() {
+
+    //Index.html sliders
+
     const swiperIndexCurrent1 = document.querySelector(".swiper__index__current1");
-  
     const swiper1 = new Swiper('.swiper1', {
       slidesPerView: 3,
       spaceBetween: 20,
@@ -47,7 +52,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   
     const swiperIndexCurrent2 = document.querySelector(".swiper__index__current2");
-  
     const swiper2 = new Swiper('.swiper2', {
       slidesPerView: 3,
       spaceBetween: 20,
@@ -93,8 +97,8 @@ document.addEventListener("DOMContentLoaded", function() {
       },
     });
 
-    const swiperIndexCurrent3 = document.querySelector(".swiper__index__current3");
 
+    const swiperIndexCurrent3 = document.querySelector(".swiper__index__current3");
     const swiper3 = new Swiper('.swiper3', {
         slidesPerView: 3,
         spaceBetween: 20,
@@ -139,4 +143,53 @@ document.addEventListener("DOMContentLoaded", function() {
           },
         },
       });
+
+    //AboutUs.html sliders
+
+    const swiperIndexCurrent4 = document.querySelector(".swiper__index__current4");
+    const swiper4 = new Swiper('.swiper4', {
+        slidesPerView: 2,
+        spaceBetween: 40,
+    
+        autoplay: {
+          delay: 3000,
+        },
+    
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+          },
+          993: {
+            slidesPerView: 2,
+          },
+          1300: {
+            slidesPerView: 2,
+          }
+        },
+    
+        navigation: {
+          nextEl: '.button-next4',
+          prevEl: '.button-prev4',
+        },
+    
+        on: {
+          init: function () {
+            const lastSlideIndex = this.slides.length;
+            const lastSlideIndexElement = document.querySelector('.swiper__index__last4');
+            if (lastSlideIndex < 10) lastSlideIndexElement.textContent = `0${lastSlideIndex}`;
+            else lastSlideIndexElement.textContent = lastSlideIndex;
+    
+            const realIndex = this.params.slidesPerView;
+            if (realIndex < 10) swiperIndexCurrent4.textContent = `0${realIndex}`;
+            else swiperIndexCurrent4.textContent = realIndex + " ";
+          },
+    
+          slideChange: function () {
+            const realIndex = this.activeIndex + this.params.slidesPerView;
+            if (realIndex < 10) swiperIndexCurrent4.textContent = `0${realIndex}`;
+            else swiperIndexCurrent4.textContent = realIndex + " ";
+          },
+        },
+      });
+
   });

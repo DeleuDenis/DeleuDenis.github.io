@@ -1,0 +1,125 @@
+.steps {
+    margin-top: 120px;
+
+    &__title+* {
+        margin-top: 10px;
+    }
+
+    &__text {
+        max-width: calc(100% - 250px);
+    }
+
+    &__text+* {
+        margin-top: 60px;
+    }
+
+    &__row {
+        display: grid;
+        align-items: stretch;
+        column-gap: 20px;
+        row-gap: 40px;
+        grid-template: 1fr 1fr/ 1fr 1fr 1fr;
+    }
+}
+
+.card-steps {
+    display: flex;
+    flex-direction: column;
+
+    &__numeration {
+        padding: 14px 16px;
+        margin-left: -1px;
+        border-left: 1px solid #703BF7;
+    }
+
+    &__content {
+        flex-grow: 1;
+        padding: 40px;
+        border-radius: 0px 10px 10px 10px;
+        position: relative;
+        background: linear-gradient(121deg, #703BF7 -49.01%, rgba(112, 59, 247, 0.00) 13.65%);
+        background-color: $background-primary;
+    }
+
+    &__content::after {
+        flex-grow: 1;
+        border-radius: 0px 10px 10px 10px;
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: calc(100% + 2px);
+        height: calc(100% + 2px);
+        background: linear-gradient(130deg, #703BF7 0%, $border-color 27%);
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 150%;
+    }
+
+    &__title+* {
+        margin-top: 16px;
+    }
+}
+
+
+@media (max-width: 1199px) {
+    .steps {
+        margin-top: 90px;
+
+        &__row {
+            column-gap: 20px;
+            row-gap: 40px;
+            grid-template: 1fr 1fr/ 1fr 1fr;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .steps {
+        margin-top: 80px;
+
+        &__title+* {
+            margin-top: 8px;
+        }
+
+        &__text {
+            max-width: initial;
+        }
+
+        &__text+* {
+            margin-top: 40px;
+        }
+
+        &__row {
+            column-gap: 0;
+            row-gap: 30px;
+            grid-template: 1fr / 1fr;
+        }
+    }
+
+    .card-steps {
+
+        &__content {
+            padding: 30px;
+        }
+
+        &__title {
+            font-size: 18px;
+        }
+
+        &__title+* {
+            margin-top: 14px;
+        }
+    }
+
+    .card-steps:nth-of-type(4),
+    .card-steps:nth-of-type(5),
+    .card-steps:nth-of-type(6){
+        display: none;
+    }
+}

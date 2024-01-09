@@ -1,0 +1,162 @@
+.values {
+    margin-top: 120px;
+
+    &__row {
+        display: flex;
+        gap: 60px;
+        align-items: center;
+    }
+
+    &__title+* {
+        margin-top: 10px;
+    }
+
+    &__content {
+        max-width: 32.265%;
+    }
+
+    &__cards {
+        padding: 50px;
+        border-radius: 12px;
+        border: 1px solid $border-color;
+        box-shadow: 0px 0px 0px 8px #191919;
+        display: grid;
+        grid-template: 1fr / 1fr 1fr;
+        row-gap: 24px;
+    }
+}
+
+.card-values {
+
+    &__row {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    &__row+* {
+        margin-top: 16px;
+    }
+
+    &__image {
+        border: 1px solid #703BF7;
+        border-radius: 50%;
+        padding: 16px;
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
+
+.card-values:nth-of-type(1),
+.card-values:nth-of-type(2) {
+    border-bottom: 1px solid $border-color;
+    padding-bottom: 24px;
+}
+
+.card-values:nth-of-type(even) {
+    padding-left: 24px;
+    position: relative;
+}
+
+.card-values:nth-of-type(even)::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: calc(100% - 25px);
+    background-color: $border-color;
+}
+
+.card-values:nth-of-type(odd) {
+    padding-right: 24px;
+}
+
+
+@media (max-width: 992px) {
+    .values {
+        margin-top: 90px;
+
+        &__row {
+            flex-direction: column;
+            gap: 40px;
+            align-items: initial;
+        }
+
+        &__title+* {
+            margin-top: 8px;
+        }
+
+        &__content {
+            max-width: 80%;
+        }
+    }
+}
+
+
+@media (max-width: 767px) {
+    .values {
+        margin-top: 80px;
+
+        &__content {
+            max-width: initial;
+        }
+
+        &__cards {
+            padding: 24px;
+            grid-template: 1fr / 1fr;
+            row-gap: 20px;
+        }
+    }
+
+    .card-values {
+
+        &__row {
+            gap: 8px;
+        }
+
+        &__row+* {
+            margin-top: 14px;
+        }
+
+        &__image {
+            padding: 14px;
+        }
+
+        &__image img {
+            max-width: 24px;
+            max-height: 24px;
+        }
+
+        &__title {
+            font-size: 18px;
+        }
+
+    }
+
+    .card-values:nth-of-type(1),
+    .card-values:nth-of-type(2) {
+        border-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .card-values:not(:last-child) {
+        border-bottom: 1px solid $border-color;
+        padding-bottom: 20px;
+    }
+
+    .card-values:nth-of-type(even) {
+        padding-left: 0;
+    }
+
+    .card-values:nth-of-type(even)::after {
+        display: none;
+    }
+
+    .card-values:nth-of-type(odd) {
+        padding-right: 0;
+    }
+}

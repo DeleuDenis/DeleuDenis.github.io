@@ -1,0 +1,219 @@
+.clients {
+    margin-top: 120px;
+    margin-bottom: 120px;
+
+    &__title+* {
+        margin-top: 10px;
+    }
+
+    &__text+* {
+        margin-top: 60px;
+    }
+
+    &__swiper {
+        overflow: hidden;
+        padding: 8px;
+        align-items: stretch;
+    }
+}
+
+.swiper-wrapper {
+    align-items: stretch;
+}
+
+.slide-clients {
+    height: auto;
+    border-radius: 12px;
+    padding: 40px;
+    border: 1px solid $border-color;
+    box-shadow: 0px 0px 0px 8px #191919;
+
+    &__title-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__title-row+* {
+        margin-top: 30px;
+    }
+
+    &__subtitle+* {
+        margin-top: 4px;
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 150%;
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+    }
+
+    &__row+* {
+        margin-top: 30px;
+    }
+
+    &__column {
+        flex: 0 1 50%;
+    }
+
+    &__column:first-of-type {
+        padding-right: 20px;
+    }
+
+    &__column:last-of-type {
+        border-left: 1px solid $border-color;
+        padding-left: 20px;
+    }
+
+    &__domainAndCategory {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        color: $text-secondary;
+        gap: 4px;
+    }
+
+    &__domainAndCategory+* {
+        margin-top: 6px;
+    }
+
+    &__content {
+        padding: 24px;
+        border-radius: 12px;
+        border: 1px solid $border-color;
+    }
+
+    &__content-title+* {
+        margin-top: 10px;
+    }
+}
+
+
+.swiper {
+
+    &__navigation {
+        margin-top: 40px;
+        padding-top: 16px;
+        border-top: 1px solid $border-color;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        height: 60px;
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__index {
+        align-self: start;
+
+        &__current {
+            color: $text-primary;
+        }
+    }
+}
+
+
+@media (max-width: 767px) {
+    .clients {
+        margin-top: 80px;
+        margin-bottom: 80px;
+
+        &__title+* {
+            margin-top: 8px;
+        }
+
+        &__text+* {
+            margin-top: 40px;
+        }
+
+        &__swiper {
+            padding: 6px;
+        }
+    }
+
+    .swiper {
+        &__navigation {
+            margin-top: 30px;
+            padding-bottom: 5px;
+            justify-content: flex-end;
+            position: relative;
+        }
+
+        &__index {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 15px;
+        }
+    }
+
+    .swiper-button-prev {
+        position: absolute;
+        left: 0;
+    }
+
+    .slide-clients {
+        padding: 24px;
+        box-shadow: 0px 0px 0px 6px #191919;
+
+        &__title-row {
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 20px;
+        }
+
+        &__title-row+* {
+            margin-top: 30px;
+        }
+
+        &__subtitle+* {
+            margin-top: 2px;
+        }
+
+        &__title {
+            font-size: 20px;
+        }
+
+        &__button-container,
+        &__button {
+            width: 100%;
+        }
+
+        &__column:first-of-type,
+        &__column:last-of-type {
+            padding-right: 16px;
+        }
+
+        &__domainAndCategory {
+            font-size: 12px;
+            gap: 2px;
+        }
+
+        &__domainAndCategory+* {
+            margin-top: 4px;
+        }
+
+        &__content {
+            padding: 20px;
+        }
+
+        &__content-title+* {
+            margin-top: 8px;
+        }
+
+        &__text {
+            font-size: 14px;
+            line-height: 150%;
+        }
+    }
+
+}

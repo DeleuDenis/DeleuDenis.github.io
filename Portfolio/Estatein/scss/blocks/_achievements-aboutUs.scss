@@ -1,0 +1,133 @@
+.achievements {
+    margin-top: 120px;
+
+    &__title+* {
+        margin-top: 10px;
+    }
+
+    &__text {
+        max-width: calc(100% - 250px);
+    }
+
+    &__text+* {
+        margin-top: 60px;
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    &__column {
+        padding: 0 15px;
+        flex: 0 1 33.333%;
+    }
+
+}
+
+.card-achievements {
+    border-radius: 10px;
+    border: 1px solid $border-color;
+    box-shadow: 0px 0px 0px 6px #191919;
+    padding: 40px;
+
+    &__title {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 150%;
+    }
+
+    &__title+* {
+        margin-top: 24px;
+    }
+}
+
+@media (max-width: 1299px) {
+    .achievements {
+        margin-top: 90px;
+
+        &__title+* {
+            margin-top: 8px;
+        }
+
+        &__text+* {
+            margin-top: 40px;
+        }
+
+        &__row {
+            flex-wrap: wrap;
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+
+        &__column {
+            padding: 0 10px;
+            flex: 0 1 50%;
+            text-align: center;
+        }
+
+        &__column:last-child {
+            padding-top: 20px;
+            flex: 0 1 100%;
+        }
+    }
+
+
+    .card-achievements {
+        padding: 30px;
+
+        &__title {
+            font-size: 20px;
+        }
+
+        &__title+* {
+            margin-top: 16px;
+        }
+
+        &__text {
+            font-size: 15px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .achievements {
+        margin-top: 80px;
+
+        &__row {
+            flex-wrap: wrap;
+            margin-left: initial;
+            margin-right: initial;
+        }
+
+        &__text {
+            max-width: initial;
+        }
+
+        &__column {
+            padding: initial;
+            text-align: initial;
+            flex: 0 1 100%;
+        }
+
+        &__column:last-child {
+            padding-top: initial;
+        }
+
+        &__column+* {
+            margin-top: 20px;
+        }
+    }
+
+
+    .card-achievements {
+        box-shadow: 0px 0px 0px 4px #191919;
+
+        &__text {
+            font-size: 14px;
+        }
+    }
+}

@@ -1,5 +1,4 @@
 /* General */
-
 @import "general/reset";
 @import "general/variables";
 @import "general/base"; 
@@ -10,10 +9,11 @@
 
 @import "blocks/header";
 @import "blocks/mobile-menu";
-@import "blocks/hero-home";
-@import "blocks/articles-home";
-@import "blocks/featured-home";
-@import "blocks/reviews-home";
-@import "blocks/questions-home";
+@import "blocks/hero-aboutUs";
+@import "blocks/values-aboutUs";
+@import "blocks/achievements-aboutUs";
+@import "blocks/steps-aboutUs";
+@import "blocks/team-aboutUs";
+@import "blocks/clients-aboutUs";
 @import "blocks/explore";
 @import "blocks/footer";
