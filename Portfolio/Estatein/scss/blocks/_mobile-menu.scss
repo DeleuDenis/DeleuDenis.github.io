@@ -1,5 +1,5 @@
 .mobile-menu {
-    position: absolute;
+    position: fixed;
     width: 100vw;
     top: 0;
     left: 0;
@@ -35,7 +35,6 @@
     }
 
     &__contact, &__contact button{
-        margin-bottom: 4%;
         font-size: 18px;
         width: 100%;
     }
